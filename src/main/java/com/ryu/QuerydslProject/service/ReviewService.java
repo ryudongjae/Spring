@@ -1,9 +1,8 @@
 package com.ryu.QuerydslProject.service;
 
 import com.ryu.QuerydslProject.domain.Review.Review;
-import com.ryu.QuerydslProject.repository.ReviewRepository;
+import com.ryu.QuerydslProject.repository.review.ReviewRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +16,7 @@ public class ReviewService {
 
     // 리뷰 등록
     public Long create(Review review) {
-        reviewRepository.saveWithLecture(review);
+        reviewRepository.save(review);
         return review.getId();
     }
 

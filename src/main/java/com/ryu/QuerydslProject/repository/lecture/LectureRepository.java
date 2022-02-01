@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.repository;
+package com.ryu.QuerydslProject.repository.lecture;
 
 import com.ryu.QuerydslProject.domain.Lecture.Lecture;
 import org.springframework.data.jpa.repository.JpaRepository;

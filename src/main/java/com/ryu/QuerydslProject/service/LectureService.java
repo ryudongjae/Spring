@@ -2,10 +2,9 @@ package com.ryu.QuerydslProject.service;
 
 import com.ryu.QuerydslProject.domain.Lecture.Lecture;
 import com.ryu.QuerydslProject.dto.LectureDto;
-import com.ryu.QuerydslProject.repository.LectureRepository;
+import com.ryu.QuerydslProject.repository.lecture.LectureRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;

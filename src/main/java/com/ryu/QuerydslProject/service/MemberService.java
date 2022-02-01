@@ -1,7 +1,7 @@
 package com.ryu.QuerydslProject.service;
 
 import com.ryu.QuerydslProject.domain.Member.Member;
-import com.ryu.QuerydslProject.repository.MemberRepository;
+import com.ryu.QuerydslProject.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +18,9 @@ public class MemberService {
     /**
      * 회원가입
      */
-    public Long join(Member member) {
+    public void saveMember(Member member) {
         validateDuplicateMember(member);
         memberRepository.save(member);
-        return member.getId();
     }
 
     // 회원 전체 조회
