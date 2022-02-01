@@ -27,12 +27,29 @@ class MemberServiceTest {
         Member member2 = new Member("ryu",23, Gender.MALE);
 
         //when
-        memberService.join(member1);
+        memberService.saveMember(member1);
 
         //then
         Assertions.assertThrows(IllegalStateException.class, ()->{
-                memberService.join(member2);
+                memberService.saveMember(member2);
         });
 
     }
+
+    @Test
+    @DisplayName("회원 가입")
+    void save_member()throws Exception{
+        //given
+        Member member = new Member("ryu",23,Gender.MALE);
+
+        //when
+        memberService.saveMember(member);
+        Member saveMember = memberRepository.findById(member.getId()).orElseThrow();
+        //then
+        org.assertj.core.api.Assertions.assertThat(member.getAge()).isEqualTo(saveMember.getAge());
+        org.assertj.core.api.Assertions.assertThat(member.getUserName()).isEqualTo(saveMember.getUserName());
+        org.assertj.core.api.Assertions.assertThat(member.getGender()).isEqualTo(saveMember.getGender());
+    }
+
+
 }

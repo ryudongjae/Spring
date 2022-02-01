@@ -18,10 +18,9 @@ public class MemberService {
     /**
      * 회원가입
      */
-    public Long join(Member member) {
+    public void saveMember(Member member) {
         validateDuplicateMember(member);
         memberRepository.save(member);
-        return member.getId();
     }
 
     // 회원 전체 조회
