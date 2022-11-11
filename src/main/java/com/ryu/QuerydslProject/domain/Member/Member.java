@@ -3,6 +3,7 @@ package com.ryu.QuerydslProject.domain.Member;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import com.ryu.QuerydslProject.domain.BaseTimeEntity;
 import com.ryu.QuerydslProject.domain.Review.Review;
+import com.ryu.QuerydslProject.domain.trade.Trade;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends BaseTimeEntity{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "member_id")
     private Long id;
 
@@ -33,6 +34,11 @@ public class Member extends BaseTimeEntity{
     @OneToMany(mappedBy = "member")
     private List<Review> reviews = new ArrayList<>();
 
+    @OneToMany(mappedBy = "seller")
+    private List<Trade> salesList  = new ArrayList<>();
+
+    @OneToMany(mappedBy = "buyer")
+    private List<Trade> buyList  = new ArrayList<>();
     public Member(String userName, int age, Gender gender) {
         this.userName = userName;
         this.age = age;

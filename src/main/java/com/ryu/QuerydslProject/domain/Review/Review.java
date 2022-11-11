@@ -16,7 +16,7 @@ import static javax.persistence.FetchType.LAZY;
 public class Review extends BaseTimeEntity{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "review_id")
     private Long id;
 
