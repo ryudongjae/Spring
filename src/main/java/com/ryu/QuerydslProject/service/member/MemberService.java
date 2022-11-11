@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.service;
+package com.ryu.QuerydslProject.service.member;
 
 import com.ryu.QuerydslProject.domain.Member.Member;
 import com.ryu.QuerydslProject.repository.member.MemberRepository;

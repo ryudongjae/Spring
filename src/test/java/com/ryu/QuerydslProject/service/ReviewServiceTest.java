@@ -3,12 +3,11 @@ package com.ryu.QuerydslProject.service;
 import com.ryu.QuerydslProject.repository.lecture.LectureRepository;
 import com.ryu.QuerydslProject.repository.member.MemberRepository;
 import com.ryu.QuerydslProject.repository.review.ReviewRepository;
+import com.ryu.QuerydslProject.service.review.ReviewService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class ReviewServiceTest {

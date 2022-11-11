@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.service;
+package com.ryu.QuerydslProject.service.review;
 
 import com.ryu.QuerydslProject.domain.Review.Review;
 import com.ryu.QuerydslProject.repository.review.ReviewRepository;
@@ -12,7 +12,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReviewService {
     private final ReviewRepository reviewRepository;
-    private final LectureService lectureService;
 
     // 리뷰 등록
     public Long create(Review review) {
@@ -43,13 +42,11 @@ public class ReviewService {
     public Long update(Long reviewId, Long lectureId, String content, Integer rating) {
         Review findReview = reviewRepository.findById(reviewId).orElseThrow();
         findReview.changeContentAndRating(content, rating);
-        lectureService.refreshAverageRating(lectureId);
         return reviewId;
     }
 
     // 리뷰 삭제
     public Long delete(Long reviewId, Long lectureId) {
-        lectureService.deleteReview(lectureId, reviewId);
         reviewRepository.delete(reviewRepository.findById(reviewId).orElseThrow());
         return reviewId;
     }

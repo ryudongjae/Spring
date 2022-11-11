@@ -1,5 +1,6 @@
 package com.ryu.QuerydslProject.service;
 
+import com.ryu.QuerydslProject.common.FileInfo;
 import com.ryu.QuerydslProject.domain.Lecture.Lecture;
 import com.ryu.QuerydslProject.repository.lecture.LectureRepository;
 import org.apache.commons.fileupload.FileItem;
@@ -10,17 +11,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import javax.persistence.EntityManager;
 import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @SpringBootTest
 class LectureServiceTest {

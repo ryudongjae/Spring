@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.service;
+package com.ryu.QuerydslProject.common;
 
 import lombok.Getter;
 import lombok.Setter;
