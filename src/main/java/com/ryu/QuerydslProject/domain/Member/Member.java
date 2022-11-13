@@ -3,6 +3,7 @@ package com.ryu.QuerydslProject.domain.Member;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import com.ryu.QuerydslProject.domain.BaseTimeEntity;
 import com.ryu.QuerydslProject.domain.Review.Review;
+import com.ryu.QuerydslProject.domain.product.Product;
 import com.ryu.QuerydslProject.domain.trade.Trade;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -32,13 +33,17 @@ public class Member extends BaseTimeEntity{
     private String career;
 
     @OneToMany(mappedBy = "member")
+    private List<Product> products  = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member")
     private List<Review> reviews = new ArrayList<>();
 
-    @OneToMany(mappedBy = "seller")
-    private List<Trade> salesList  = new ArrayList<>();
+    @OneToMany(mappedBy = "seller" )
+    private List<Trade> saleTradeList = new ArrayList<>();
 
     @OneToMany(mappedBy = "buyer")
-    private List<Trade> buyList  = new ArrayList<>();
+    private List<Trade> buyTradeList = new ArrayList<>();
+
     public Member(String userName, int age, Gender gender) {
         this.userName = userName;
         this.age = age;
