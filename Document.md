@@ -1,5 +1,1 @@
-* QueryDSL
-* Spring-cloud
-* Spring-batch
-* Spring-boot
-* Spring-batch
+* 프로젝트전 도메인 구상 
