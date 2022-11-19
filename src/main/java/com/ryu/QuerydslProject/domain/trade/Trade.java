@@ -10,6 +10,7 @@ public class Trade {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "trade_id")
     private Long id;
 
     @ManyToOne
@@ -17,4 +18,8 @@ public class Trade {
 
     @ManyToOne
     private Member buyer;
+
+    private String startPoint;
+
+    private String endPoint;
 }
