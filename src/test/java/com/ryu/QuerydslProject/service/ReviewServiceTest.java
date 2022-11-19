@@ -1,7 +1,6 @@
 package com.ryu.QuerydslProject.service;
 
-import com.ryu.QuerydslProject.repository.lecture.LectureRepository;
-import com.ryu.QuerydslProject.repository.member.MemberRepository;
+import com.ryu.QuerydslProject.repository.member.UserRepository;
 import com.ryu.QuerydslProject.repository.review.ReviewRepository;
 import com.ryu.QuerydslProject.service.review.ReviewService;
 import org.junit.jupiter.api.DisplayName;
@@ -19,10 +18,8 @@ class ReviewServiceTest {
     ReviewRepository reviewRepository;
 
     @Autowired
-    MemberRepository memberRepository;
+    UserRepository memberRepository;
 
-    @Autowired
-    LectureRepository lectureRepository;
     
     @Test
     @DisplayName("")        

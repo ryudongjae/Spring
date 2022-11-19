@@ -2,6 +2,7 @@ package com.ryu.QuerydslProject.domain.Member;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
 import com.ryu.QuerydslProject.domain.BaseTimeEntity;
+import com.ryu.QuerydslProject.domain.Point.Point;
 import com.ryu.QuerydslProject.domain.Review.Review;
 import com.ryu.QuerydslProject.domain.product.Product;
 import com.ryu.QuerydslProject.domain.trade.Trade;
@@ -17,10 +18,11 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Member extends BaseTimeEntity{
+public class User extends BaseTimeEntity{
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "member_id")
+    @Column(name = "user_id")
     private Long id;
 
     private String userName;
@@ -30,12 +32,14 @@ public class Member extends BaseTimeEntity{
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private String career;
+    private String phoneNumber;
 
-    @OneToMany(mappedBy = "member")
+    private Long point;
+
+    @OneToMany(mappedBy = "user")
     private List<Product> products  = new ArrayList<>();
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "user")
     private List<Review> reviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "seller" )
@@ -44,16 +48,7 @@ public class Member extends BaseTimeEntity{
     @OneToMany(mappedBy = "buyer")
     private List<Trade> buyTradeList = new ArrayList<>();
 
-    public Member(String userName, int age, Gender gender) {
-        this.userName = userName;
-        this.age = age;
-        this.gender = gender;
-    }
+    @OneToMany(mappedBy = "user")
+    private List<Point> points = new ArrayList<>();
 
-    public Member(String userName, int age, Gender gender, String career) {
-        this.userName = userName;
-        this.age = age;
-        this.gender = gender;
-        this.career = career;
-    }
 }

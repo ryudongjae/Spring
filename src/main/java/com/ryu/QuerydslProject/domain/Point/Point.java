@@ -1,13 +1,21 @@
 package com.ryu.QuerydslProject.domain.Point;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.ryu.QuerydslProject.domain.Member.User;
+
+import javax.persistence.*;
 
 @Entity
 public class Point {
 
     @Id@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @Enumerated(EnumType.STRING)
+    private PointType pointType;
+
+    private Long amount;
 }

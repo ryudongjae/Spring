@@ -1,6 +1,6 @@
 package com.ryu.QuerydslProject.domain.product;
 
-import com.ryu.QuerydslProject.domain.Member.Member;
+import com.ryu.QuerydslProject.domain.Member.User;
 import com.ryu.QuerydslProject.domain.Review.Review;
 import com.ryu.QuerydslProject.domain.trade.Trade;
 
@@ -22,11 +22,13 @@ public class Product {
     private String information;
 
     //제품의 주인
-    @ManyToOne
-    private Member member;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     //제품 거래
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private Trade trade;
 
     //제품의 리뷰 리스트

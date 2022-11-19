@@ -1,7 +1,8 @@
 package com.ryu.QuerydslProject.domain.trade;
 
-import ch.qos.logback.core.joran.action.ActionUtil;
-import com.ryu.QuerydslProject.domain.Member.Member;
+
+
+import com.ryu.QuerydslProject.domain.Member.User;
 
 import javax.persistence.*;
 
@@ -13,11 +14,13 @@ public class Trade {
     @Column(name = "trade_id")
     private Long id;
 
-    @ManyToOne
-    private Member seller;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User seller;
 
-    @ManyToOne
-    private Member buyer;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User buyer;
 
     private String startPoint;
 

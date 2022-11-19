@@ -1,7 +1,8 @@
 package com.ryu.QuerydslProject.domain.Review;
 
 import com.ryu.QuerydslProject.domain.BaseTimeEntity;
-import com.ryu.QuerydslProject.domain.Member.Member;
+
+import com.ryu.QuerydslProject.domain.Member.User;
 import com.ryu.QuerydslProject.domain.product.Product;
 import com.ryu.QuerydslProject.domain.trade.Trade;
 import lombok.*;
@@ -24,8 +25,8 @@ public class Review extends BaseTimeEntity{
 
     //리뷰 남기는 사람
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     //리뷰남길 제품
     @ManyToOne(fetch = LAZY)
@@ -37,6 +38,4 @@ public class Review extends BaseTimeEntity{
 
     @Enumerated(value = EnumType.STRING)
     private StarPoint starPoint;
-
-
 }
