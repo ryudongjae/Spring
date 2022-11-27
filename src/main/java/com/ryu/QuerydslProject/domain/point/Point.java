@@ -1,6 +1,6 @@
-package com.ryu.QuerydslProject.domain.Point;
+package com.ryu.QuerydslProject.domain.point;
 
-import com.ryu.QuerydslProject.domain.Member.User;
+import com.ryu.QuerydslProject.domain.member.User;
 
 import javax.persistence.*;
 
@@ -8,6 +8,7 @@ import javax.persistence.*;
 public class Point {
 
     @Id@GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "point_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

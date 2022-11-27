@@ -1,6 +1,6 @@
-package com.ryu.QuerydslProject.repository.member;
+package com.ryu.QuerydslProject.repository.user;
 
-import com.ryu.QuerydslProject.domain.Member.User;
+import com.ryu.QuerydslProject.domain.member.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

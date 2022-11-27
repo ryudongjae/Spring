@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.domain.Member;
+package com.ryu.QuerydslProject.domain.member;
 
 public enum Gender {
     MALE("남자"), FEMALE("여자");

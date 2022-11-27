@@ -1,11 +1,7 @@
 package com.ryu.QuerydslProject.service;
 
-import com.ryu.QuerydslProject.domain.Member.Gender;
-
-import com.ryu.QuerydslProject.domain.Member.User;
-import com.ryu.QuerydslProject.repository.member.UserRepository;
-import com.ryu.QuerydslProject.service.member.UserService;
-import org.junit.jupiter.api.Assertions;
+import com.ryu.QuerydslProject.repository.user.UserRepository;
+import com.ryu.QuerydslProject.service.user.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

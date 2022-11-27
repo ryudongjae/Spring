@@ -1,13 +1,10 @@
-package com.ryu.QuerydslProject.domain.Member;
+package com.ryu.QuerydslProject.domain.member;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.ryu.QuerydslProject.domain.BaseTimeEntity;
-import com.ryu.QuerydslProject.domain.Point.Point;
-import com.ryu.QuerydslProject.domain.Review.Review;
-import com.ryu.QuerydslProject.domain.product.Product;
+import com.ryu.QuerydslProject.domain.point.Point;
+import com.ryu.QuerydslProject.domain.review.Review;
 import com.ryu.QuerydslProject.domain.trade.Trade;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -35,9 +32,6 @@ public class User extends BaseTimeEntity{
     private String phoneNumber;
 
     private Long point;
-
-    @OneToMany(mappedBy = "user")
-    private List<Product> products  = new ArrayList<>();
 
     @OneToMany(mappedBy = "user")
     private List<Review> reviews = new ArrayList<>();

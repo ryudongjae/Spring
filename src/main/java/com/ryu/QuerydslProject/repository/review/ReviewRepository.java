@@ -1,6 +1,6 @@
 package com.ryu.QuerydslProject.repository.review;
 
-import com.ryu.QuerydslProject.domain.Review.Review;
+import com.ryu.QuerydslProject.domain.review.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

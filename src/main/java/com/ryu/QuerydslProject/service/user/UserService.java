@@ -1,7 +1,7 @@
-package com.ryu.QuerydslProject.service.member;
+package com.ryu.QuerydslProject.service.user;
 
-import com.ryu.QuerydslProject.domain.Member.User;
-import com.ryu.QuerydslProject.repository.member.UserRepository;
+import com.ryu.QuerydslProject.domain.member.User;
+import com.ryu.QuerydslProject.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

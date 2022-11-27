@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.domain.Review;
+package com.ryu.QuerydslProject.domain.review;
 
 public enum StarPoint {
 

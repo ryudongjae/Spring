@@ -1,6 +1,6 @@
 package com.ryu.QuerydslProject.service;
 
-import com.ryu.QuerydslProject.repository.member.UserRepository;
+import com.ryu.QuerydslProject.repository.user.UserRepository;
 import com.ryu.QuerydslProject.repository.review.ReviewRepository;
 import com.ryu.QuerydslProject.service.review.ReviewService;
 import org.junit.jupiter.api.DisplayName;

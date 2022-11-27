@@ -1,6 +1,6 @@
 package com.ryu.QuerydslProject.service.review;
 
-import com.ryu.QuerydslProject.domain.Review.Review;
+import com.ryu.QuerydslProject.domain.review.Review;
 import com.ryu.QuerydslProject.repository.review.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

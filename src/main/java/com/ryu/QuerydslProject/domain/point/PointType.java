@@ -1,4 +1,4 @@
-package com.ryu.QuerydslProject.domain.Point;
+package com.ryu.QuerydslProject.domain.point;
 
 /*
  * @ 포인트 구분
