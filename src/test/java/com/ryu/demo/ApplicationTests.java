@@ -1,10 +1,10 @@
-package com.ryu.QuerydslProject;
+package com.ryu.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QuerydslProjectApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
